@@ -6,10 +6,10 @@ import {Component} from '@angular/core';
 
 export class HomePage {
   constructor() {
-      this['nome'] = 'teste';
+    this['nome'] = 'teste';
   }
 
   getNome() {
-      return 'MSG: '+ this['nome'];
+    return 'MSG: '+ this['nome'];
   }
 }
