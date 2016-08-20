@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button closeModal (click)="cancel()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Nova Conta</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="modal-contas">
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Descrição</ion-label>
+      <ion-input type="text" [(ngModel)]="conta.descricao"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button block light (click)="salvar()">Salvar</button>
+</ion-content>
