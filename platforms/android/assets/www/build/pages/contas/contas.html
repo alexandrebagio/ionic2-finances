@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contas
+    </ion-title>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of listContas">
+      <ion-item>
+        {{item.descricao}}
+      </ion-item>
+      <ion-item-options>
+        <button primary (click)="edit(item)">
+          <ion-icon name="create"></ion-icon>
+        </button>
+        <button danger (click)="delete(item)">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <button fab fab-bottom fab-right danger (click)="insert()">
+    <ion-icon name="add"></ion-icon>
+  </button>
+</ion-content>
